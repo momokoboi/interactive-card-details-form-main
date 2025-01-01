@@ -1,0 +1,303 @@
+@charset "UTF-8";
+/* in logic change display none and flex of elemnts to be shown, input fields and sucess registration after validated submission! */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    /* neutral colors */
+    --Light_grayish_violet: hsl(270, 3%, 87%);
+    --Dark_grayish_violet: hsl(279, 6%, 55%);
+    --Very_dark_violet: hsl(278, 68%, 11%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+
+/* 
+- Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
+- Red (input errors): hsl(0, 100%, 66%) */
+
+body, html{
+    height: calc(100vh - 13px);
+}
+
+main{
+    height: calc(100vh - 13px);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+
+
+    position: relative; 
+
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    /* background-color: red; */
+    
+}
+/* background of first div */
+.design{
+    background-image: url("images/bg-main-desktop.png");
+    background-repeat: none;
+    background-size: cover;
+
+    width: 40vw;
+    height: calc(100vh -13px);
+    
+}
+
+/* cards configs */
+.card_front{
+    display: flex;
+    flex-flow: column nowrap;
+
+    height: fit-content;
+    user-select: none;
+
+    position: absolute;
+
+    top: 10%;
+    left: 10%;
+}
+
+.wrapper1{
+    max-width: 450px;
+    max-height: 250px;
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+}
+
+#logo{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+#number{
+    position: absolute;
+    bottom: 50px;
+    left: -6px;
+
+    word-spacing: 0.8em;
+    letter-spacing: 0.1em;
+    font-size: 1.7em;
+    font-weight: 100;
+    
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.wrapper2{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    padding: 0px 30px 10px 30px;
+    width: 100%;
+
+
+    position: absolute;
+    bottom: 5px;
+
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+}
+
+.wrapper2 > p{
+    text-transform: uppercase;
+}
+
+.card_back{
+    display: flex;
+    flex-flow: column nowrap;
+
+    height: fit-content;
+    user-select: none;
+
+    position: absolute;
+
+    top: 47%;
+    left: 15%;
+
+}
+
+.card_back p {
+    position: absolute;
+    top: 45%;
+    left: 80%;
+
+    color: white;
+    font-size: 1.3em;
+}
+
+/* inputs configs */
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.inputs_side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;
+}
+
+#input_fields{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+
+    
+    width: 300px;
+
+    justify-content: center;
+    align-content: center;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85em;
+    font-weight: 600;
+
+}
+#input_fields input{
+    height: 50px;
+    border-radius: 10px;
+    text-indent: 20px;
+
+    border: 1px solid var(--Light_grayish_violet);
+}
+#input_fields input::placeholder{
+    text-indent: 20px;
+}
+
+#input_fields button{
+    height: 50px;
+    width: 100%;
+}
+
+#input_fields input:focus{
+
+    outline: none;
+
+    border: 2px solid;
+    border-image: linear-gradient(hsl(249, 99%, 64%),hsl(278, 94%, 30%)) 1;
+}
+
+fieldset{
+    display: flex;
+    gap: 10px;
+    
+    border: none;
+    justify-content: space-between;
+}
+
+.divider{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+#divider2{
+    display: flex;
+    flex-flow: row nowrap;
+    
+}
+#ic_xpmonth{
+    width: 70px;
+}
+
+#ic_xpyear{
+    width: 70px;
+}
+
+#i_ccvc{
+    width: 140px;
+}
+
+/* error handling */
+
+.error{
+    display: none;
+    font-size: 0.6em;
+    color: hsl(0, 100%, 66%);
+}
+
+.error{
+    display: flex;
+}
+.name{
+    display: none;
+}
+.number{
+    display: none;
+}
+
+.month{
+    display: inline-block;
+    margin-right: 65px;
+}
+.year{
+    display: inline-block;
+}
+
+/* sucess configs */
+#success{
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#success > img{
+    user-select: none;
+}
+
+#success > h2{
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+#success > p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    color: var(--Dark_grayish_violet);
+}
+
+/* buttons config */
+button{
+    margin-top: 10px;
+    background-color: var(--Very_dark_violet);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+
+    width: calc(100% + 100px);
+}
+
+button:hover{
+    cursor: pointer;
+    color: var(--Very_dark_violet);
+    background-color: rgb(0, 165, 180);
+    border: 1px solid var(--Light_grayish_violet);
+}
+
+.attribution{
+    background-color: aqua;
+    height: 13px;
+}
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="validation.js" ></script>
+</head>
+<body>
+  <main>
+    <div class="design"></div>
+    <section class="card_front">
+      <div class="wrapper1">
+        <img src="images/bg-card-front.png" alt="card_front">
+        <img src="images/card-logo.svg" alt="logo_card" id="logo">
+        <p id="number">0000 0000 0000 0000</p>
+        <div class="wrapper2">
+          <p id="namec">Jane Appleseed</p>
+          <p id="datec">00/00</p>
+        </div>
+      </div>
+    </section>
+    <div class="card_back">
+      <div class="wrapper1">
+        <img src="images/bg-card-back.png" alt="card_back">
+        <p id="cvc">000
+      </div></p>
+    </div>
+    <section class="inputs_side">
+      <form id="input_fields" method="post">
+        
+          
+        
+          <label for="ic_name">Cardholder Name</label>
+          <input type="text" placeholder="e.g. Jane Appleseed" id="ic_name"></input>
+          <div class="error name">aa</div>
+        
+          <label for="i_cnumber">Card Number</label>
+          <input type="text" placeholder="e.g. 1234 5678 9123 0000" id="i_cnumber"></input>
+          <div class="error number">aa</div>
+        <fieldset>
+            <div class="divider">
+              <label for="ic_xpdate">Exp. Date (MM/YY)</label>
+              <div class="divider2">
+                <input type="number" name="month" id="ic_xpmonth" placeholder="MM" min="1" max="12" pattern="[0-9]+" inputmode="numeric">
+                <input type="number" name="year" id="ic_xpyear" placeholder="YY" min="25" max="99" pattern="[0-9]+" inputmode="numeric">
+                <div class="erro_divs">
+                  <div class="error month"></div>
+                  <div class="error year"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider cvc">
+              <label for="i_ccvc">CVC</label>
+              <input type="number" name="cvc" id="i_ccvc" placeholder="e.g. 123" min="001" max="999" pattern="[0-999]" inputmode="numeric">
+              <div class="error cvcerror"></div>
+            </div>
+        </fieldset>
+        
+          
+          
+        
+          <button type="button" id="form_sub">Confirm</button>
+      </form>
+      <div id="success">
+        <img src="images/icon-complete.svg" alt="icon_complete">
+        <h2>thank you!</h2>
+        <p>We've added your card details</p>
+        <button>
+          Continue
+        </button>
+      </div>
+    </section>
+    
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Luca Pohl-Angel</a>.
+  </div>
+  
+</body>
+</html>
