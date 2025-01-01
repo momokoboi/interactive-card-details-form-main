@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* in logic change display none and flex of elemnts to be shown, input fields and sucess registration after validated submission! */
 
+/* using different font! */
+
 *{
     margin: 0px;
     padding: 0px;
