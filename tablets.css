@@ -1,0 +1,16 @@
+
+.card_front{
+    top: 20%;
+    left: 10%;
+}
+
+.card_back{
+    top: 45%;
+}
+
+#number{
+    font-size: 1.8vw;
+}
+.wrapper2{
+    font-size: 1.5vw;
+}

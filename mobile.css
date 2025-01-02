@@ -1,0 +1,85 @@
+main{
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.design{
+    height: 30vh;
+    width: 100vw;
+}
+
+#input_fields{
+    margin-top: 60px;
+    
+    font-size: 0.77em;
+}
+
+.card_front{
+    top: 150px;
+    left: 20vw;
+    z-index: 1;
+}
+
+.wrapper1{
+    width:215px
+    
+}
+
+#logo{
+    width: 40px;
+}
+
+
+
+
+#number{
+    position: relative;
+    bottom: 25px;
+    margin-bottom: -20px;
+    margin-top: -14px;
+
+    font-size: 0.7em;
+}
+
+.wrapper2{
+    position: relative;
+    margin-left: -5px;
+
+    font-size: 0.7em;
+}
+
+.card_back{
+    top: 80px;
+    left: 35vw;
+
+}
+
+.card_back p{
+    top: 51px;
+
+    font-size: 0.8em;
+}
+
+/* inputs dynamic */
+
+
+#ic_xpmonth{
+    width: 40%;
+}
+
+#ic_xpyear{
+    width: 40%;
+}
+
+/* space inputs */
+
+
+.divider{
+    gap: 15px;
+}
+.cvc{
+    gap: 15px;
+}

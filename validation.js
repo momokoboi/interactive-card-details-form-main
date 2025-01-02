@@ -23,7 +23,7 @@ function check_inputs(event) {
     const cvc_number = document.getElementById("i_ccvc").value.trim() // CVC code
 
     // regex patterns to validate the inputs
-    const name_regex = /^[\w\s]{1,20}$/ // only letters, numbers, and spaces (max 20 chars)
+    const name_regex = /^[\w\s]{1,16}$/ // only letters, numbers, and spaces (max 20 chars)
     const card_number_regex = /^[0-9]{16}$/ // exactly 16 digits
     const card_month_regex = /^(0[1-9]|1[0-2])$/ // valid months (01-12)
     const card_year_regex = /^(2[5-9]|[3-9][0-9])$/ // valid years (25-99)
@@ -96,7 +96,7 @@ function handleErrors(errors, card_name, card_number, card_month, card_year, cvc
     if (errors.includes("name_i")) {
         const error_name = document.getElementsByClassName("name")[0]
         error_name.style.display = "block"
-        error_name.innerHTML = "<p>[Invalid Name] - Use letters & numbers only, max length is 20!</p>"
+        error_name.innerHTML = "<p>[Invalid Name] - Use letters & numbers only, max length is 16!</p>"
         cc_name.innerText = "Jane Appleseed"
     } else {
         const error_name = document.getElementsByClassName("name")[0]
