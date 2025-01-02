@@ -83,3 +83,7 @@ main{
 .cvc{
     gap: 15px;
 }
+
+#success{
+    margin-top: 60px;
+}
